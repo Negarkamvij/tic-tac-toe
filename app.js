@@ -9,17 +9,23 @@ let currentPlayer = "X";
 let gameOver = false;
 let winner = null;    
 
-/*function initializeGame() {
+function initializeGame() {
     board = [
         ["", "", ""],
         ["", "", ""],
         ["", "", ""],
+    ]
     currentPlayer = "X";
     gameOver = false;
     winner = null;
     renderBoard();    
   };
-}*/
+
+  function resetGame(){
+    initializeGame();
+    document.getElementById("message").innerText = "";
+  }
+
 
 function checkWinner(){
     for (let i =0; i<3; i++){ //We check the Rows 
