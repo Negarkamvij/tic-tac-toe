@@ -30,6 +30,7 @@ function checkWinner(){
         ){
             gameOver = true;
             winner = board[i][0];
+            document.getElementById("message").innerText = `Winner is: ${winner}`;
             console.log("Winner is: " + winner);
             return;
         }
@@ -42,6 +43,7 @@ function checkWinner(){
         ) {
         gameOver = true;
         winner = board[0][j];
+        document.getElementById("message").innerText = `Winner is: ${winner}`;
         console.log("Winner is: " + winner);
         return; 
        }
@@ -54,6 +56,7 @@ function checkWinner(){
     ){
         gameOver = true;
         winner = board[0][0];
+        document.getElementById("message").innerText = `Winner is: ${winner}`;
         console.log("Winner is: " + winner);
         return;
      }
@@ -65,6 +68,7 @@ function checkWinner(){
         ) {
         gameOver = true;
         winner = board[0][2];
+        document.getElementById("message").innerText = `Winner is: ${winner}`;
         console.log("Winner is: " + winner);
         return;
        }
