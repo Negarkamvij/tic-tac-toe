@@ -18,7 +18,7 @@ let winner = null;
     gameOver = false;
     winner = null;
     renderBoard();    
-    ];
+  };
 }*/
 
 function cellClicked(i, j){
@@ -41,8 +41,10 @@ function renderBoard(){
     for (let i =0; i<3; i++){
         const cells = rows[i].getElementsByClassName("cell");
         for (let j=0; j<3; j++){
-            console.log(`Updating cell ${i},${j} to`, board[i][j]);
             cells[j].innerText = board[i][j];
+            cells[j].onclick = function() {
+                cellClicked(i, j);
+            };
         }
        }
 }
