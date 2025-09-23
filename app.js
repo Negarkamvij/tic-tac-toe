@@ -1,6 +1,10 @@
 console.log("Hello World");
 
-
+let board = [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""],
+    ];
 let currentPlayer = "X";
 let gameOver = false;
 let winner = null;    
@@ -12,11 +16,7 @@ let winner = null;
         ["", "", ""],
     ];
 }*/
-let board = [
-        ["X", "O", "X"],
-        ["O", "X", "O"],
-        ["X", "O", "X"],
-    ];
+
 function renderBoard(){
     const gameBoard = document.getElementById("gameBoard");
     const rows = gameBoard.getElementsByClassName("row");
