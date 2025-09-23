@@ -30,6 +30,7 @@ function checkWinner(){
         ){
             gameOver = true;
             winner = board[i][0];
+            console.log("Winner is: " + winner);
             return;
         }
     }
@@ -41,6 +42,7 @@ function checkWinner(){
         ) {
         gameOver = true;
         winner = board[0][j];
+        console.log("Winner is: " + winner);
         return; 
        }
     }
@@ -52,6 +54,7 @@ function checkWinner(){
     ){
         gameOver = true;
         winner = board[0][0];
+        console.log("Winner is: " + winner);
         return;
      }
 
@@ -62,6 +65,7 @@ function checkWinner(){
         ) {
         gameOver = true;
         winner = board[0][2];
+        console.log("Winner is: " + winner);
         return;
        }
     }  
@@ -73,11 +77,14 @@ function cellClicked(i, j){
     board[i][j] = currentPlayer;
     renderBoard();
     checkWinner();
-    if (currentPlayer === "X"){
-        currentPlayer = "O";
-    } else{
-        currentPlayer = "X";
-    }
+    if(!gameOver){
+        if (currentPlayer === "X"){
+            currentPlayer = "O";
+        } else{
+            currentPlayer = "X";
+    
+        }
+    }    
 }
 
  
