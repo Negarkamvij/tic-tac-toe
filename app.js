@@ -14,8 +14,25 @@ let winner = null;
         ["", "", ""],
         ["", "", ""],
         ["", "", ""],
+    currentPlayer = "X";
+    gameOver = false;
+    winner = null;
+    renderBoard();    
     ];
 }*/
+
+function cellClicked(i, j){
+    if (gameOver || board[i][j]!=""){
+        return;
+    }
+    board[i][j] = currentPlayer;
+    renderBoard();
+    if (currentPlayer === "X"){
+        currentPlayer = "O";
+    } else{
+        currentPlayer = "X";
+    }
+}
 
 function renderBoard(){
     const gameBoard = document.getElementById("gameBoard");
