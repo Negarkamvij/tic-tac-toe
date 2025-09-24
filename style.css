@@ -8,6 +8,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.piece {
+  width: 80%;           
+  height: 80%;          
+  object-fit: contain;   
+  pointer-events: none;  
+  display: block;
+  margin: auto;
+}
 
 
 .cell {
@@ -43,16 +51,18 @@ body {
 
 #message{
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
-    color: darkgreen;
+    color: hsl(204, 80%, 24%);
     margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
 }
 
 #statusText {
   text-align: center;
-  font-size: 22px;
-  color: navy;
+  font-size: 30px;
+  color:  hsl(204, 80%, 24%);
+  font-family: 'Pacifico', cursive;
   margin-bottom: 10px;
 }
 #gameBoard {
@@ -66,4 +76,17 @@ body {
   gap: 0;
   padding: 0;
   margin: auto;
+}
+
+#resetBtn {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+#resetBtn:hover {
+  transform: scale(1.1); 
 }

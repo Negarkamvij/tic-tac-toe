@@ -108,7 +108,13 @@ function renderBoard(){
     for (let i =0; i<3; i++){
         const cells = rows[i].getElementsByClassName("cell");
         for (let j=0; j<3; j++){
-            cells[j].innerText = board[i][j];
+            if (board[i][j] === "X") {
+                cells[j].innerHTML = '<img src="x.png" class="piece">';
+            } else if (board[i][j] === "O") {
+                cells[j].innerHTML = '<img src="o.png" class="piece">';
+            } else {
+                cells[j].innerHTML = "";
+        }
             cells[j].onclick = function() {
                 cellClicked(i, j);
             };
