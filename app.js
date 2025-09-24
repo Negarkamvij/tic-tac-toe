@@ -27,8 +27,7 @@ function resetGame(){
     initializeGame();
     document.getElementById("message").innerText = "";
   }
-// window.resetGame = resetGame;
-// window.initializeGame = initializeGame;
+
 
 function checkWinner(){
     for (let i =0; i<3; i++){ //We check the Rows 
@@ -88,7 +87,6 @@ function cellClicked(i, j){
         return;
     }
     board[i][j] = currentPlayer;
-    renderBoard();
     checkWinner();
     if(!gameOver){
         if (currentPlayer === "X"){
@@ -97,7 +95,8 @@ function cellClicked(i, j){
             currentPlayer = "X";
     
         }
-    }    
+    } 
+    renderBoard();   
 }
 
  
@@ -115,6 +114,13 @@ function renderBoard(){
             };
         }
        }
+
+const status = document.getElementById("statusText");
+if (gameOver && winner) {
+    status.innerText = `🎉`;
+  } else {
+    status.innerText = `🔄 ${currentPlayer}'s turn`;
+  }       
 }
 
  
