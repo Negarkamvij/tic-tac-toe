@@ -51,7 +51,7 @@ body {
 
 #message{
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
     color: hsl(204, 80%, 24%);
     margin-bottom: 20px;
@@ -61,7 +61,7 @@ body {
 
 #statusText {
   text-align: center;
-  font-size: 30px;
+  font-size: 32px;
   color:  hsl(204, 80%, 24%);
   font-family: 'Pacifico', cursive;
   margin-bottom: 10px;
