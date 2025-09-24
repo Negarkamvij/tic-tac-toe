@@ -10,6 +10,7 @@ let gameOver = false;
 let winner = null;    
 
 function initializeGame() {
+    // console.log("initialize")
     board = [
         ["", "", ""],
         ["", "", ""],
@@ -21,11 +22,13 @@ function initializeGame() {
     renderBoard();    
   };
 
-  function resetGame(){
+function resetGame(){
+    console.log("Reset button clicked");
     initializeGame();
     document.getElementById("message").innerText = "";
   }
-
+// window.resetGame = resetGame;
+// window.initializeGame = initializeGame;
 
 function checkWinner(){
     for (let i =0; i<3; i++){ //We check the Rows 
@@ -116,4 +119,4 @@ function renderBoard(){
 
  
 
-renderBoard();
+initializeGame();
