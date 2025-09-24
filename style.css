@@ -56,6 +56,7 @@ body {
     color: hsl(204, 80%, 24%);
     margin-bottom: 20px;
     font-family: 'Pacifico', cursive;
+    height: 40px
 }
 
 #statusText {
@@ -64,6 +65,7 @@ body {
   color:  hsl(204, 80%, 24%);
   font-family: 'Pacifico', cursive;
   margin-bottom: 10px;
+  height: 36px
 }
 #gameBoard {
   background-image: url('wood-grid.png'); 
